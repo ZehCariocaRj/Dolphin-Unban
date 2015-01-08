@@ -100,7 +100,7 @@ program is finished modifying your profile.'''
                      'Wii/shared2/DWC_AUTHDATA']:
         try:
             os.remove(del_path)
-        except FileNotFoundError:
+        except OSError:
             pass
 
     # MAKE THE CONSOLE FRIEND CODE
