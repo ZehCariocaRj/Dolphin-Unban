@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import hashlib
 import os
+from os.path import expanduser
+home = expanduser("~")
 
 DEBUG = False
 
@@ -61,7 +63,7 @@ def trymkdir(a):
 
 
 def do_it():
-    eula = '''Wiimmfi Unbanner 3.14, by jimbo1qaz 2014
+    eula = '''Private Server Unbanner 3.14, by jimbo1qaz - Edited by PokeAcer
 THIS IS NO LONGER A NAND GENERATOR! It only spoofs a couple of identifiers!
 
 IMPORTANT: Close Dolphin before continuing, and do not reopen it until this
@@ -74,7 +76,7 @@ program is finished modifying your profile.'''
     while profile_path == '':
         print('Path to Dolphin profile (or Dolphin program folder if using portable mode)')
         print('You can drag the profile folder (or program folder) into this window')
-        profile_path = "/Users/kyle/Library/Application Support/Dolphin" #Change this path to that of your Dolphin folder
+        profile_path = home + "/Library/Application Support/Dolphin" #Change this path to that of your Dolphin folder - home means /home/<user> or C:\Users\<user>
     print('')
 
     profile_path = normalize_path(profile_path)
@@ -128,7 +130,7 @@ program is finished modifying your profile.'''
     # We're done.
     print('We\'re done.')
     print()
-    print('Note that you may need to create a new profile in your game, or possibly')
+    print('Note that you will probably need to create a new profile in your game, or possibly')
     print('delete your game save entirely in order to clear the game identifier(s).')
     print('For Mario Kart Wii, you must use a new license. No need to wipe the save file.')
     print()
